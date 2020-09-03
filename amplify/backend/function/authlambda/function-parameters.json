@@ -1,0 +1,28 @@
+{
+    "permissions": {
+        "auth": {
+            "lambdaresolversd4f852a1": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "api": {
+            "graphqlapi": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "storage": {
+            "users": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

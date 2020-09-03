@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+input UserInput {
+  firstName: String!
+  lastName: String!
+}
+
+type Query {
+  getUser(userId: String): User @function(name: "authlambda-${env}")
+  listUsers: [User] @function(name: "authlambda-${env}")
+}
+
+type Mutation {
+  createUser(user: UserInput!): User @function(name: "authlambda-${env}")
+}

@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lambdaresolvers-dev-114157-authRole",
+            "UnauthRoleArn": "arn:aws:iam::750695761659:role/amplify-lambdaresolvers-dev-114157-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::750695761659:role/amplify-lambdaresolvers-dev-114157-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-lambdaresolvers-dev-114157-deployment",
+            "UnauthRoleName": "amplify-lambdaresolvers-dev-114157-unauthRole",
+            "StackName": "amplify-lambdaresolvers-dev-114157",
+            "StackId": "arn:aws:cloudformation:us-east-2:750695761659:stack/amplify-lambdaresolvers-dev-114157/00b89620-edfc-11ea-b6c0-02356f1d181e",
+            "AmplifyAppId": "d1d6p1rg6q17k1"
+        },
+        "categories": {
+            "auth": {
+                "lambdaresolversd4f852a1": {}
+            }
+        }
+    }
+}
