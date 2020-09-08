@@ -1,0 +1,59 @@
+type Todo
+@model(subscriptions: null, mutations: null)
+@auth(
+  rules: [
+    {
+      allow: groups
+      groups: ["admin"]
+      operations: [create, update, delete, read]
+    },
+    {
+      allow: groups
+      groups: ["tecnicos"]
+      operations: [read]
+    }
+  ]
+) {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type User
+@model(subscriptions: null, mutations: null)
+@auth(
+  rules: [
+    {
+      allow: groups
+      groups: ["admin"]
+      operations: [create, update, delete, read]
+    }
+  ]
+) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  searchString: String!
+  todos: [Todo!] @connection
+}
+
+input InputTodo {
+  name: String!
+  description: String
+}
+
+input InputUser {
+  firstName: String!
+  lastName: String!
+  searchString: String!
+  todos: [InputTodo!]
+}
+
+type Query {
+  listAllUsers: String @function(name: "demo125Userslambda-${env}")
+}
+
+type Mutation {
+  createUser(user: InputUser!): User!
+  @function(name: "demo125Userslambda-${env}")
+}
